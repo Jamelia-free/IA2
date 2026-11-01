@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Conf</title>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <script src="assets/validation.js" defer></script>
+  </head>
+
+  <body>
+    <header class="login-header">
+      <img class="logo" src="images/logo-full.svg" alt="Coding Conf Logo" />
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="login.html">Register</a>
+          </li>
+          <li>
+            <a href="ticket.html">Ticket</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="login">
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p >Secure your spot at next year's biggest coding conference.</p>
+
+      <form id="registration-form" action="ticket.html" method="post" novalidate>
+        <div class="upload-field">
+          <label class="login-title" for="file">Upload Avatar</label>
+          <input class="avatar-upload-input" type="file" id="file" name="file" accept="image/png,image/jpeg" aria-describedby="avatar-hint">
+          <div class="avatar-upload" id="avatar-dropzone">
+            <label class="avatar-upload-trigger" for="file">
+              <img class="avatar-upload-icon" src="images/icon-upload%20(1).svg" alt="" />
+              <img class="avatar-preview" id="avatar-preview" alt="Selected avatar preview" hidden />
+              <span id="avatar-prompt">Drag and drop or click to upload</span>
+            </label>
+            <div class="avatar-actions" id="avatar-actions" hidden>
+              <button type="button" id="remove-avatar">Remove image</button>
+              <button type="button" id="change-avatar">Change image</button>
+            </div>
+          </div>
+          <div class="avatar-upload-hint" aria-live="polite">
+            <img id="avatar-hint-icon" src="images/icon-info.svg" alt="" />
+            <p id="avatar-hint">Upload your photo (JPG or PNG, max size: 500KB).</p>
+          </div>
+        </div>
+        
+
+        <div class="form-field">
+          <label class="login-title" for="full-name">Full Name</label>
+          <div class="input-box">
+            <input type="text" id="full-name" name="full-name" aria-describedby="name-error" required>
+          </div>
+          <p class="field-error" id="name-error" role="alert" hidden></p>
+        </div>
+
+        <div class="form-field">
+          <label class="login-title" for="email">Email Address</label>
+          <div class="input-box">
+            <input type="email" id="email" placeholder="example@gmail.com" name="email" aria-describedby="email-error" required>
+          </div>
+          <p class="field-error" id="email-error" role="alert" hidden></p>
+        </div>
+
+        <div class="form-field">
+          <label class="login-title" for="gitHub">GitHub Username</label>
+          <div class="input-box">
+            <input type="text" id="gitHub" placeholder="@yourusername" name="gitHub" aria-describedby="github-error" required>
+          </div>
+          <p class="field-error" id="github-error" role="alert" hidden></p>
+        </div>
+
+        <button class="submit-btn" type="submit">Generate My Ticket</button>
+      </form>
+    </main>
+  </body>
+</html>
