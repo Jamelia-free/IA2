@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Ticket | Coding Conf</title>
+    <link rel="icon" type="image/png" href="../assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <script src="../JS/ticket.js" defer></script>
+  </head>
+  <body>
+    <header class="ticket-site-header">
+      <img class="logo" src="../assets/logo-full.svg" alt="Coding Conf Logo" />
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Register</a></li>
+          <li><a href="ticket.html">Ticket</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="ticket-page">
+      <h1>Congrats, <span id="ticket-name-heading"></span>!<br />Your ticket is ready.</h1>
+      <p id="ticket-message" class="ticket-message" hidden>
+        No registration details found. Please <a href="login.html">register</a> first.
+      </p>
+      <p id="ticket-confirmation" class="ticket-confirmation" hidden>
+        Your ticket details are ready. Keep this page to reference your ticket.<br />
+        Registration email: <span id="ticket-confirmation-email"></span>
+      </p>
+      <section id="ticket-card" class="ticket-card" aria-label="Conference ticket" hidden>
+        <div class="ticket-main">
+          <div class="ticket-heading">
+            <img src="../assets/logo-mark.svg" alt="" />
+            <div>
+              <h2>Coding Conf</h2>
+              <p>Jan 31, 2025 / <br>Austin, TX</p>
+            </div>
+          </div>
+          <div class="ticket-attendee">
+            <img id="ticket-avatar" class="ticket-avatar" alt="Attendee avatar" />
+            <div>
+              <h2 id="ticket-name"></h2>
+              <div class="ticket-github-details">
+                <img src="../assets/icon-github.svg" alt="" aria-hidden="true" />
+                <p id="ticket-github"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="ticket-stub" aria-label="Ticket number">
+          <span>#<span id="ticket-number"></span></span>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
